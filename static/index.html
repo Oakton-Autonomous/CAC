@@ -95,7 +95,7 @@
 
                 <p id="school-search-empty" hidden> No matching schools found.</p>
 
-                <div class="school-controls"
+                <div class="school-controls">
                     <button type = "button" id="school-prev" aria-label="Previous school">←</button>
                     <button type = "button" id="school-next" aria-label="Next school">→</button>
                 </div>
@@ -138,7 +138,7 @@
                 <form id="class-form">
                     <div class="field">
                         <label for="class-subject">Subject</label>
-                        <select id="fit-subject" name="subject">
+                        <select id="fit-subject" name="subject" multiple>
                             <option value="">Any subject</option>
                             <option value="math">Math</option>
                             <option value="science">Science</option>
@@ -152,7 +152,7 @@
 
                     <div class="field">
                         <label for="class-workload">Preferred workload</label>
-                        <select id="fit-workload" name="workload">
+                        <select id="fit-workload" name="workload" multiple>
                             <option value="">Any workload</option>
                             <option value="free">Free</option>
                             <option value="light">Light</option>
@@ -164,7 +164,7 @@
 
                     <div class="field">
                         <label for="class-difficulty">Preferred difficulty</label>
-                        <select id="class-difficulty" name="difficulty">
+                        <select id="class-difficulty" name="difficulty" multiple>
                             <option value="">Any difficulty</option>
                             <option value="easy">Easy</option>
                             <option value="medium">Average</option>
@@ -172,8 +172,27 @@
                             <option value="high">Challenging</option>
                         </select>
                     </div>
+
+                    <div class="field">
+                        <label for="class-credit">Class type</label>
+                        <select id="class-credit" name="credit" multiple>
+                            <option value="">Any class type</option>
+                            <option value="ap">AP class</option>
+                            <option value="honors">Honors class</option>
+                            <option value="regular">Regular class</option>
+                            <option value="college">College/DE class</option>
+                            <option value="academy">Academy class</option>
+                        </select>
+                    </div>
+
+                    <button class="button" type="submit">Find matching courses</button>
                 </form>
+
+                <div id="class-results" aira-live="waiting message">
+                    <p>Courses matching your criteria will appear here.</p>
+                </div>
             </section>
+
 
                 <!-- accidental inline suggestion, but its cool so we can keep it:
                 <div class="school-grid">
