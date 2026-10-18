@@ -1,0 +1,29 @@
+/* Navigation Stuff */
+
+.top-nav, .side-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.top-nav {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.side-nav {
+    flex-direction: column;
+}
+
+.top-nav a, .side-nav {
+    padding: 8px 12px;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.top-nav a:hover, .side-nav a:hover {
+    background: var(--color-surface-alt); 
+    border-color: var(--color-border);
+}
