@@ -13,7 +13,7 @@
 </head>
 <body id="top">
     <header class="masthead">
-        <div class="masthead-art" data-art="masthead" area-hidden="true"></div>
+        <div class="masthead-art" data-art="masthead" aria-hidden="true"></div>
 
         <div class="masthead-title">
             <p class="eyebrow">Students Field Guide (R)</p>
@@ -79,7 +79,7 @@
                         from being wasted on asking as many seniors as you can about how classes were.
                         However, everyone's experience is different, and the information you find here should
                         be taken with a grain of salt. Use your own judgement
-                        and research to make the best decisions for yourself. (r)</p>
+                        and research to make the best decisions for yourself. (r)
                     </p>
                 </div>
                 <div data-art="something(r)" aria-hidden="true"></div>
@@ -130,7 +130,7 @@
                 </div>
             </section>
 
-            <section class="panel panel--fit" id="fit">
+            <section class="panel panel--finder" id="finder">
                 <p class="eyebrow">02 / CLASSES</p>
                 <h2>body body body (r)</h2>
                 <p>body body body (r)</p>
@@ -138,7 +138,7 @@
                 <form id="class-form">
                     <div class="field">
                         <label for="class-subject">Subject</label>
-                        <select id="fit-subject" name="subject" multiple>
+                        <select id="finder-subject" name="subject" multiple>
                             <option value="">Any subject</option>
                             <option value="math">Math</option>
                             <option value="science">Science</option>
@@ -152,7 +152,7 @@
 
                     <div class="field">
                         <label for="class-workload">Preferred workload</label>
-                        <select id="fit-workload" name="workload" multiple>
+                        <select id="finder-workload" name="workload" multiple>
                             <option value="">Any workload</option>
                             <option value="free">Free</option>
                             <option value="light">Light</option>
@@ -207,20 +207,19 @@
 
             <script src="/js/board.js" defer></script>
             <script src="/js/explorer.js" defer></script>
-            <script type="module" src="/js/app.js"></script>
 
             <script>
-                const track = document.getelementById("school-track");
+                const track = document.getElementById("school-track");
 
-                document.getelementById("school-prev").addEventListener("click", () => {
+                document.getElementById("school-prev").addEventListener("click", () => {
                     track.scrollBy({ left: -track.offsetWidth, behavior: "smooth" });
                 });
 
-                document.getelementById("school-next").addEventListener("click", () => {
+                document.getElementById("school-next").addEventListener("click", () => {
                     track.scrollBy({ left: track.offsetWidth, behavior: "smooth" });
                 });
 
-                const schoolSearch = document.getelementById("school-search");
+                const schoolSearch = document.getElementById("school-search");
                 const schoolCards = [...document.querySelectorAll("#school-track .school-card")];
                 const schoolSearchEmpty = document.getElementById("school-search-empty");
 
