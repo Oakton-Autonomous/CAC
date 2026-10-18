@@ -231,4 +231,45 @@ body{
     .collage {
         grid-row: 1;
     }
+
+    .sidebar--left, .sidebar--right {
+        grid-column: auto;
+        display: flex;
+    }
+
+    .siderbar--left {
+        grid-row: 2;
+    }
+
+    .siderbar--right {
+        grid-row: 3;
+    }
+
+    .top-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .panel--welcome {
+        min-height: 0px;
+    }
+
+    .panel--pinned {
+        grid-template-columns: minmax(0, 1fr) 60px;
+    }
+
+    .school-card {
+        flex-basis: 175px;
+    }
+
+    .review-tools, .resource-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
