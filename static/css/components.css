@@ -87,3 +87,39 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
 }
+
+/* Forms */
+
+input, select, textarea {
+    width: 100%;
+    min-width: 0; 
+    padding: 10px 12px;
+    border: 1px solid var(--coor-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+}
+
+textarea{
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.field label, label {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.field select [multiple] {
+    min-height: 120px;
+}
+
+.field select[multiple] option {
+    padding: 5px;
+}
+
