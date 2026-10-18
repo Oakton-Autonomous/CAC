@@ -27,3 +27,25 @@
     background: var(--color-surface-alt); 
     border-color: var(--color-border);
 }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2 px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* Labels and Section Markets and stuff */
+
+.eyebrow {
+    color: var(--color-secondary);
+    font-family: var(--font-momo);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.section-intro {
+    color: var(--color-text-muted);
+    max-width: 65ch;
+}
+
+/* Buttons and Links*/
