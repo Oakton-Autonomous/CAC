@@ -1,1 +1,2 @@
-Anything with (R) means we have to replace or revamp
+Anything with (r) or(R) means we have to replace or revamp.
+Data-art is where we put assets in.
