@@ -188,40 +188,54 @@
                     <button class="button" type="submit">Find matching courses</button>
                 </form>
 
-                <div id="class-results" aira-live="waiting message">
+                <div id="class-results" aria-live="waiting message">
                     <p>Courses matching your criteria will appear here.</p>
                 </div>
             </section>
-
-
-                <!-- accidental inline suggestion, but its cool so we can keep it:
-                <div class="school-grid">
-                    <a href="/schools/1" class="school-card">
-                        <div class="school-card-art" data-art="something(r)" aria-hidden="true"></div>
-                        <h3>School 1</h3>
-                        <p>body body body (r)</p>
-                    </a>
-
-                    <a href="/schools/2" class="school-card">
-                        <div class="school-card-art" data-art="something(r)" aria-hidden="true"></div>
-                        <h3>School 2</h3>
-                        <p>body body body (r)</p>
-                    </a>
-
-                    <a href="/schools/3" class="school-card">
-                        <div class="school-card-art" data-art="something(r)" aria-hidden="true"></div>
-                        <h3>School 3</h3>
-                        <p>body body body (r)</p>
-                    </a>
-
-                    <a href="/schools/4" class="school-card">
-                        <div class="school-card-art" data-art="something(r)" aria-hidden="true"></div>
-                        <h3>School 4</h3>
-                        <p>body body body (r)</p>
-                    </a>
-
-                
-                </div> -->
         </main>
+            <footer class="site-footer">
+                <a class="footer-title" href="/">CAC</a>
+                <p>body body body (r)</p>
+                <p>© 2026 CAC (r) and random other stuff I guess</p>
+            </footer>P
+
+            <audio id="buttonSound" preload="none"></audio>
+
+            <script>
+                window.home = {posts: [] };
+            </script>
+
+            <script src="/js/board.js" defer></script>
+            <script src="/js/explorer.js" defer></script>
+            <script type="module" src="/js/app.js"></script>
+
+            <script>
+                const track = document.getelementById("school-track");
+
+                document.getelementById("school-prev").addEventListener("click", () => {
+                    track.scrollBy({ left: -track.offsetWidth, behavior: "smooth" });
+                });
+
+                document.getelementById("school-next").addEventListener("click", () => {
+                    track.scrollBy({ left: track.offsetWidth, behavior: "smooth" });
+                });
+
+                const schoolSearch = document.getelementById("school-search");
+                const schoolCards = [...document.querySelectorAll("#school-track .school-card")];
+                const schoolSearchEmpty = document.getElementById("school-search-empty");
+
+                schoolSearch.addEventListener("input", () => {
+                    const q = schoolSearch.value.trim().toLowerCase();
+                    let count = 0;
+
+                    schoolCards.forEach(card => {
+                        const match = card.textContent.toLowerCase().includes(q);
+                        card.hidden = !match;
+                        if (match) count++;
+                    });
+
+                    schoolSearchEmpty.hidden = count > 0;
+                });
+            </script>
     </div>
 </body>
